@@ -1,1 +1,20 @@
-print("hello world")
+#SS = Sunswift
+import math
+
+Height = 10 #Height of hill
+Length = 15 #Length of the road on hill
+
+Distance = 100 #Distance to hill, from LiDAR
+t = 0.5 #Time to get to hill
+
+Mass_SS = 900 #Kg
+V_i = 60 #km/hr
+Theta = math.asin(Height/Length) #Angle going up hill in Radians
+
+
+Ke_i =(1/2) * Mass_SS * V_i^2 #Intial kinetic energy
+GPE = Mass_SS * Height * 9.8  #Joules
+
+V_o = math.sqrt(2 * 9.8 * Height) #Velocity of Ke_i = GPE, Optimal velocity
+
+A = (V_o - V_i) / t #Acceleration to get to V_o
